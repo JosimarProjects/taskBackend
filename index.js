@@ -6,6 +6,8 @@ const consign = require('consign')
 
 consign()
     .then('./config/middleware.js')    
+    .then('./api')
+    .then('./config/routes.js')
     .into(app)
 
     
@@ -13,6 +15,6 @@ consign()
 app.db = db
 
 
-app.listen(3000, () => {
+app.listen(3000, () => { 
     console.log('Listening on port 3000')
 })
